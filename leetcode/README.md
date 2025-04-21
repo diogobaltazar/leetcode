@@ -5,45 +5,45 @@ This repository contains Python implementations of various LeetCode exercises, a
 ## Project Structure
 
 ```
-├── leetcode/
-│   ├── exercises/           # All exercise implementations
-│   │   ├── arrays/          # Array-related exercises
-│   │   │   ├── max_value.py # Find maximum value in a list
-│   │   │   └── ...
-│   │   ├── strings/         # String-related exercises
-│   │   ├── linked_lists/    # Linked list exercises
+leetcode/
+├── exercises/           # All exercise implementations
+│   ├── arrays/          # Array-related exercises
+│   │   ├── max_value.py # Find maximum value in a list
 │   │   └── ...
-│   ├── tests/               # Test cases for all exercises
-│   │   ├── arrays/          # Tests for array exercises
-│   │   │   ├── test_max_value.py
-│   │   │   └── ...
-│   │   ├── strings/         # Tests for string exercises
+│   ├── strings/         # String-related exercises
+│   ├── linked_lists/    # Linked list exercises
+│   └── ...
+├── tests/               # Test cases for all exercises
+│   ├── arrays/          # Tests for array exercises
+│   │   ├── test_max_value.py
 │   │   └── ...
-│   ├── templates/           # Templates for new exercises and tests
-│   │   ├── exercise_template.py
-│   │   └── test_template.py
-│   └── run_tests.py         # Test runner script
-└── .vscode/                 # VS Code configuration
-    └── settings.json        # Editor settings
+│   ├── strings/         # Tests for string exercises
+│   └── ...
+├── templates/           # Templates for new exercises and tests
+│   ├── exercise_template.py
+│   └── test_template.py
+├── .vscode/             # VS Code configuration
+│   └── settings.json    # Editor settings
+└── run_tests.py         # Test runner script
 ```
 
 ## Exercises
 
 ### Arrays
-1. **Max Value in an Unsorted List** (`leetcode/exercises/arrays/max_value.py`) - Find the maximum value in an unsorted list of numbers. [O(n)]
-2. **Binary Search** (`leetcode/exercises/arrays/binary_search.py`) - Find the index of a target value in a sorted array using binary search. [O(log n)]
-3. **Merge Sort** (`leetcode/exercises/arrays/merge_sort.py`) - Sort an array using the merge sort algorithm. [O(n log n)]
-4. **Bubble Sort** (`leetcode/exercises/arrays/bubble_sort.py`) - Sort an array using the bubble sort algorithm. [O(n²)]
-5. **Find Duplicates** (`leetcode/exercises/arrays/find_duplicates.py`) - Determine if an array contains any duplicate elements. [O(n) or O(n log n)]
-6. **Permutations** (`leetcode/exercises/arrays/permutations.py`) - Generate all possible permutations of a list. [O(n!)]
+1. **Max Value in an Unsorted List** (`exercises/arrays/max_value.py`) - Find the maximum value in an unsorted list of numbers. [O(n)]
+2. **Binary Search** (`exercises/arrays/binary_search.py`) - Find the index of a target value in a sorted array using binary search. [O(log n)]
+3. **Merge Sort** (`exercises/arrays/merge_sort.py`) - Sort an array using the merge sort algorithm. [O(n log n)]
+4. **Bubble Sort** (`exercises/arrays/bubble_sort.py`) - Sort an array using the bubble sort algorithm. [O(n²)]
+5. **Find Duplicates** (`exercises/arrays/find_duplicates.py`) - Determine if an array contains any duplicate elements. [O(n) or O(n log n)]
+6. **Permutations** (`exercises/arrays/permutations.py`) - Generate all possible permutations of a list. [O(n!)]
 
 ### Strings
-1. **Anagram Checker** (`leetcode/exercises/strings/anagram_checker.py`) - Determine if two strings are anagrams of each other. [O(n)]
+1. **Anagram Checker** (`exercises/strings/anagram_checker.py`) - Determine if two strings are anagrams of each other. [O(n)]
 
 ### Math
-1. **Power Calculation** (`leetcode/exercises/math/power.py`) - Calculate base raised to a power using divide and conquer. [O(log n)]
-2. **Square Root** (`leetcode/exercises/math/square_root.py`) - Calculate the square root of a number using binary search. [O(log n)]
-3. **Fibonacci** (`leetcode/exercises/math/fibonacci.py`) - Calculate Fibonacci numbers with different implementations. [O(n) or O(2ⁿ)]
+1. **Power Calculation** (`exercises/math/power.py`) - Calculate base raised to a power using divide and conquer. [O(log n)]
+2. **Square Root** (`exercises/math/square_root.py`) - Calculate the square root of a number using binary search. [O(log n)]
+3. **Fibonacci** (`exercises/math/fibonacci.py`) - Calculate Fibonacci numbers with different implementations. [O(n) or O(2ⁿ)]
 
 ## Running Tests
 
@@ -51,34 +51,34 @@ You can run tests using the provided `run_tests.py` script:
 
 ```bash
 # Run all tests
-cd leetcode && python run_tests.py
+python run_tests.py
 
 # Run tests for a specific category
-cd leetcode && python run_tests.py arrays
+python run_tests.py arrays
 
 # Run tests for a specific exercise
-cd leetcode && python run_tests.py arrays.max_value
+python run_tests.py arrays.max_value
 ```
 
 Alternatively, you can use the standard unittest module:
 
 ```bash
 # Run all tests
-cd leetcode && python -m unittest discover -s tests
+python -m unittest discover -s tests
 
 # Run tests for a specific category
-cd leetcode && python -m unittest discover -s tests/arrays
+python -m unittest discover -s tests/arrays
 
 # Run tests for a specific exercise
-cd leetcode && python -m unittest tests/arrays/test_max_value.py
+python -m unittest tests/arrays/test_max_value.py
 ```
 
 ## Adding New Exercises
 
 To add a new exercise:
 
-1. Copy the template from `leetcode/templates/exercise_template.py` to the appropriate category directory under `leetcode/exercises/`
-2. Copy the test template from `leetcode/templates/test_template.py` to the corresponding test directory
+1. Copy the template from `templates/exercise_template.py` to the appropriate category directory under `exercises/`
+2. Copy the test template from `templates/test_template.py` to the corresponding test directory
 3. Implement the solution with proper documentation, type hints, and complexity analysis
 4. Write comprehensive tests for all scenarios
 5. Update this README.md with information about the new exercise
