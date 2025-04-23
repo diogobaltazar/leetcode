@@ -36,6 +36,7 @@ This repository contains Python implementations of various LeetCode exercises, a
 4. **Bubble Sort** (`leetcode/exercises/arrays/bubble_sort.py`) - Sort an array using the bubble sort algorithm. [O(n²)]
 5. **Find Duplicates** (`leetcode/exercises/arrays/find_duplicates.py`) - Determine if an array contains any duplicate elements. [O(n) or O(n log n)]
 6. **Permutations** (`leetcode/exercises/arrays/permutations.py`) - Generate all possible permutations of a list. [O(n!)]
+7. **Median of Two Sorted Arrays** (`leetcode/exercises/arrays/median_sorted_arrays.py`) - Find the median of two sorted arrays. [O(log(min(m,n)))]
 
 ### Strings
 1. **Anagram Checker** (`leetcode/exercises/strings/anagram_checker.py`) - Determine if two strings are anagrams of each other. [O(n)]
@@ -137,6 +138,60 @@ Complexity:
 - Space Complexity: O(1) as we only use a single variable regardless of input size
 """
 ```
+
+## Algorithmic Techniques
+
+This repository demonstrates several important algorithmic techniques:
+
+### Dynamic Programming
+
+Dynamic Programming (DP) is a method for solving complex problems by breaking them down into simpler subproblems. It's applicable when:
+
+1. **Overlapping Subproblems**: The same subproblems are solved multiple times
+2. **Optimal Substructure**: An optimal solution can be constructed from optimal solutions of its subproblems
+
+**Key Approaches**:
+- **Memoization (Top-Down)**: Store results of subproblems in a cache to avoid redundant calculations
+- **Tabulation (Bottom-Up)**: Solve all possible subproblems iteratively, starting from the smallest
+
+**Example**: The Fibonacci implementation in `leetcode/exercises/math/fibonacci.py` demonstrates both the inefficient recursive approach [O(2ⁿ)] and the efficient dynamic programming approach [O(n)].
+
+### Divide and Conquer
+
+Divide and Conquer involves breaking a problem into smaller subproblems, solving them independently, and combining their results.
+
+**Key Steps**:
+1. **Divide**: Break the problem into smaller subproblems
+2. **Conquer**: Solve the subproblems recursively
+3. **Combine**: Merge the solutions of subproblems into a solution for the original problem
+
+**Examples**:
+- Binary Search (`leetcode/exercises/arrays/binary_search.py`) [O(log n)]
+- Merge Sort (`leetcode/exercises/arrays/merge_sort.py`) [O(n log n)]
+- Power Calculation (`leetcode/exercises/math/power.py`) [O(log n)]
+
+### Greedy Algorithms
+
+Greedy algorithms make locally optimal choices at each step with the hope of finding a global optimum.
+
+**Characteristics**:
+- Make the best choice at the moment without considering the future
+- Generally efficient but don't always yield optimal solutions
+- Work well for problems with "greedy choice property" and "optimal substructure"
+
+### Backtracking
+
+Backtracking is an algorithmic technique that incrementally builds candidates for solutions and abandons a candidate ("backtracks") as soon as it determines the candidate cannot lead to a valid solution.
+
+**Example**: The Permutations implementation in `leetcode/exercises/arrays/permutations.py` [O(n!)] demonstrates backtracking.
+
+### Space-Time Tradeoffs
+
+Many algorithms demonstrate the fundamental tradeoff between time and space complexity:
+
+**Examples**:
+- Hash table for duplicate detection (`leetcode/exercises/arrays/find_duplicates.py`) trades space [O(n)] for time efficiency [O(n)]
+- Optimized Fibonacci implementation (`leetcode/exercises/math/fibonacci.py`) shows how to reduce space complexity from O(n) to O(1)
 
 ## Practice Questions and Answers
 
