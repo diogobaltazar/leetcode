@@ -193,6 +193,63 @@ Many algorithms demonstrate the fundamental tradeoff between time and space comp
 - Hash table for duplicate detection (`leetcode/exercises/arrays/find_duplicates.py`) trades space [O(n)] for time efficiency [O(n)]
 - Optimized Fibonacci implementation (`leetcode/exercises/math/fibonacci.py`) shows how to reduce space complexity from O(n) to O(1)
 
+## Statistical Concepts
+
+This section provides mathematical definitions of common statistical measures that are often used in algorithm problems.
+
+### Median
+
+The **median** is the middle value of a dataset when arranged in ascending or descending order.
+
+- For a dataset with an **odd number** of elements: The median is the middle element.
+- For a dataset with an **even number** of elements: The median is the average of the two middle elements.
+
+**Mathematical Definition**:
+- For a sorted array `A` of length `n`:
+  - If `n` is odd: `median = A[n/2]` (integer division)
+  - If `n` is even: `median = (A[n/2 - 1] + A[n/2]) / 2`
+
+**Example**:
+- For `[1, 3, 5, 7, 9]`: The median is `5`
+- For `[2, 4, 6, 8]`: The median is `(4 + 6) / 2 = 5`
+
+**Implementation**: See `leetcode/exercises/arrays/median_sorted_arrays.py` for an efficient algorithm to find the median of two sorted arrays.
+
+### Mean (Average)
+
+The **mean** (or average) is the sum of all values divided by the number of values.
+
+**Mathematical Definition**:
+- For a dataset `A` with `n` elements: `mean = (A[0] + A[1] + ... + A[n-1]) / n`
+- Using summation notation: `mean = (∑ A[i]) / n` for `i` from `0` to `n-1`
+
+**Example**:
+- For `[1, 3, 5, 7, 9]`: The mean is `(1 + 3 + 5 + 7 + 9) / 5 = 25 / 5 = 5`
+- For `[2, 4, 6, 8]`: The mean is `(2 + 4 + 6 + 8) / 4 = 20 / 4 = 5`
+
+### Mode
+
+The **mode** is the value that appears most frequently in a dataset. A dataset may have one mode, multiple modes, or no mode.
+
+**Mathematical Definition**:
+- For a dataset `A`, the mode is the value `x` such that the frequency of `x` in `A` is greater than the frequency of any other value in `A`.
+
+**Example**:
+- For `[1, 2, 2, 3, 4]`: The mode is `2` (appears twice)
+- For `[1, 1, 2, 2, 3, 3]`: The modes are `1`, `2`, and `3` (each appears twice)
+- For `[1, 2, 3, 4]`: There is no mode (all values appear once)
+
+### Range
+
+The **range** is the difference between the maximum and minimum values in a dataset.
+
+**Mathematical Definition**:
+- For a dataset `A`: `range = max(A) - min(A)`
+
+**Example**:
+- For `[1, 3, 5, 7, 9]`: The range is `9 - 1 = 8`
+- For `[2, 4, 6, 8]`: The range is `8 - 2 = 6`
+
 ## Practice Questions and Answers
 
 This repository includes practice questions and answers to help you understand algorithm complexity and optimization techniques. The questions cover topics such as:
