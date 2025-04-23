@@ -22,6 +22,15 @@ Constraints:
 Complexity:
 - Time Complexity: O(log n) where n is the input number
 - Space Complexity: O(1) as we only use a constant amount of extra space
+
+Advantages:
+- Efficient logarithmic time complexity
+- Configurable precision parameter for different accuracy needs
+- Early termination for perfect squares
+- Handles edge cases (0, 1, negative numbers)
+- Special handling for small numbers (less than 1)
+- Demonstrates binary search on a continuous range
+- No dependency on built-in math functions
 """
 
 

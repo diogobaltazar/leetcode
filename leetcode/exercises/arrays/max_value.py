@@ -16,6 +16,14 @@ Examples:
 Complexity:
 - Time Complexity: O(n) where n is the length of the input list. This is optimal for an unsorted list as we must examine every element at least once.
 - Space Complexity: O(1) as we only use a single variable regardless of input size
+
+Advantages:
+- Simple and straightforward implementation
+- Memory efficient (constant space complexity)
+- Single-pass algorithm (only needs to traverse the list once)
+- Works on any comparable elements, not just numbers
+- Can be easily modified to find minimum value or both min and max
+- Handles negative numbers and any valid comparable values
 """
 from typing import List, TypeVar
 

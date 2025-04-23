@@ -17,19 +17,28 @@ Examples:
 Complexity:
 - Time Complexity: Varies by implementation (see below)
 - Space Complexity: Varies by implementation (see below)
+
+Advantages:
+- Demonstrates multiple approaches to the same problem
+- Shows clear tradeoffs between time and space complexity
+- Illustrates the power of dynamic programming and memoization
+- Provides a classic example of how recursion can be optimized
+- Shows how to reduce space complexity from O(n) to O(1)
+- Excellent teaching tool for algorithm optimization techniques
+- Appears frequently in interviews and educational contexts
 """
 
 
 def fibonacci_recursive(n: int) -> int:
     """
     Calculate the nth Fibonacci number using recursion.
-    
+
     Args:
         n: A non-negative integer
-        
+
     Returns:
         The nth Fibonacci number
-        
+
     Complexity:
         - Time: O(2^n) - exponential time complexity
         - Space: O(n) due to the recursion stack
@@ -42,52 +51,52 @@ def fibonacci_recursive(n: int) -> int:
 def fibonacci_dynamic(n: int) -> int:
     """
     Calculate the nth Fibonacci number using dynamic programming.
-    
+
     Args:
         n: A non-negative integer
-        
+
     Returns:
         The nth Fibonacci number
-        
+
     Complexity:
         - Time: O(n) - linear time complexity
         - Space: O(n) for the array storing all Fibonacci numbers
     """
     if n <= 1:
         return n
-    
+
     # Create an array to store Fibonacci numbers
-    fib = [0] * (n + 1)
+    fib = [0] * (n + 1) # n+1 because we start with 0
     fib[0], fib[1] = 0, 1
-    
+
     # Fill the array
     for i in range(2, n + 1):
         fib[i] = fib[i - 1] + fib[i - 2]
-    
+
     return fib[n]
 
 
 def fibonacci_optimized(n: int) -> int:
     """
     Calculate the nth Fibonacci number using an optimized iterative approach.
-    
+
     Args:
         n: A non-negative integer
-        
+
     Returns:
         The nth Fibonacci number
-        
+
     Complexity:
         - Time: O(n) - linear time complexity
         - Space: O(1) - constant space complexity
     """
     if n <= 1:
         return n
-    
+
     a, b = 0, 1
-    
+
     # Only store the last two numbers
     for _ in range(2, n + 1):
         a, b = b, a + b
-    
+
     return b

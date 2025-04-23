@@ -25,6 +25,14 @@ Constraints:
 Complexity:
 - Time Complexity: O(n) where n is the length of the input strings
 - Space Complexity: O(1) as we only use a fixed-size counter (26 lowercase letters)
+
+Advantages:
+- Linear time complexity O(n) is optimal for this problem
+- Early termination when lengths differ or invalid characters are found
+- Demonstrates hash map usage for character counting
+- Shows space-time tradeoff between hash map and sorting approaches
+- Common interview question that tests string manipulation skills
+- Practical applications in word games, cryptography, and text analysis
 """
 from typing import Dict
 

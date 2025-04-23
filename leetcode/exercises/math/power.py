@@ -17,20 +17,28 @@ Examples:
 Complexity:
 - Time Complexity: O(log n) where n is the exponent
 - Space Complexity: O(log n) due to the recursion stack
+
+Advantages:
+- Dramatically more efficient than naive O(n) approach
+- Handles positive, negative, and zero exponents
+- Classic example of divide-and-conquer algorithm
+- Used in cryptography for modular exponentiation
+- Can be implemented iteratively to reduce space complexity
+- Demonstrates how to break down a problem into smaller subproblems
 """
 
 
 def power(base: float, exponent: int) -> float:
     """
     Calculate base raised to the power of exponent using divide and conquer.
-    
+
     Args:
         base: The base number
         exponent: The exponent (can be positive, negative, or zero)
-        
+
     Returns:
         The result of base^exponent
-        
+
     Complexity:
         - Time: O(log n) where n is the absolute value of the exponent
         - Space: O(log n) due to the recursion stack
@@ -38,16 +46,16 @@ def power(base: float, exponent: int) -> float:
     # Handle negative exponents
     if exponent < 0:
         return 1 / power(base, -exponent)
-    
+
     # Base cases
     if exponent == 0:
         return 1
     if exponent == 1:
         return base
-    
+
     # Recursive divide and conquer
     half = power(base, exponent // 2)  # O(log n) recursive calls
-    
+
     # If exponent is even, result is half * half
     # If exponent is odd, result is half * half * base
     if exponent % 2 == 0:

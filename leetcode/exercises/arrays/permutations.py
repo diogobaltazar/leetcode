@@ -15,6 +15,14 @@ Examples:
 Complexity:
 - Time Complexity: O(n!) where n is the length of the input list
 - Space Complexity: O(n * n!) to store all permutations
+
+Advantages:
+- Complete solution that generates all possible arrangements
+- Recursive approach makes the implementation elegant and readable
+- Useful for problems requiring exhaustive search
+- Foundation for backtracking algorithms
+- Can be modified to handle constraints (e.g., generate only permutations that satisfy certain conditions)
+- Applicable to many real-world problems like scheduling and combinatorial optimization
 """
 from typing import List
 
@@ -22,13 +30,13 @@ from typing import List
 def all_permutations(arr: List[int]) -> List[List[int]]:
     """
     Generate all possible permutations of a list.
-    
+
     Args:
         arr: A list of distinct integers
-        
+
     Returns:
         A list of all possible permutations
-        
+
     Complexity:
         - Time: O(n!) where n is the length of the input list
         - Space: O(n * n!) to store all permutations
@@ -36,20 +44,20 @@ def all_permutations(arr: List[int]) -> List[List[int]]:
     # Base case: if the list has 0 or 1 elements, there's only one permutation
     if len(arr) <= 1:
         return [arr[:]]  # Return a copy of the list
-    
+
     result = []
-    
+
     # Try each element as the first element
     for i in range(len(arr)):
         # Extract current element
         current = arr[i]
-        
+
         # Generate all permutations of the remaining elements
         remaining = arr[:i] + arr[i+1:]
-        
+
         # For each permutation of the remaining elements,
         # add the current element at the beginning
         for p in all_permutations(remaining):
             result.append([current] + p)
-    
+
     return result
