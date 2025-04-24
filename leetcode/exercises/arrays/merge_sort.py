@@ -22,6 +22,24 @@ Advantages:
 - Well-suited for external sorting of large datasets that don't fit in memory
 - Naturally parallelizable due to its divide-and-conquer approach
 - Predictable performance regardless of input data patterns
+
+Mnemonic:
+
+merge_sort
+- 1 base cases [], [a]
+- 2 mid
+- 3 left, right = merge_sort left :mid, merge_sort right mid:
+- 4 return merge left right
+
+merge
+- 1 i, j, result
+- 2 iter i, j < len left, len right
+    - 3 IF left i < right j: result append left i, i++ ELSE result append right j, j++
+- 4 result extend left i: right j:
+- 5 return result
+
+Practice: 10
+Minutes: 46
 """
 from typing import List
 
