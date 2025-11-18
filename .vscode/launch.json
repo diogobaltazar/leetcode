@@ -15,6 +15,35 @@
                 "abcdba",
                 "Madam, in Eden, Im Adam"
             ]
+        },
+        {
+            "name": "sort:sort_colours",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/leetcode/exercises/sort/sort_colours.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "[2,0,2,1,1,0]",
+                "[0,1,2,1,0]",
+                "[2,2,1,1,0,0]"
+            ]
+        },
+        {
+            "name": "arr:merge_sorted",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/leetcode/exercises/arrays/merge_sorted.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "([1,2,3,0,0,0], 3, [2,5,6], 3)",
+                "([1], 1, [], 0)",
+                "([0], 0, [1], 1)",
+                "([1,11,12,33,0,0], 4, [13,45], 2)"
+            ]
         }
     ]
 }
